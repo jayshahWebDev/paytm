@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paytm</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              darkBlue: "#002970",
+              lightBlue: "#00baf2",
+              navBarGray: "#f6f6f6",
+              black: "#000000",
+              white: "#ffffff",
+              rechargeBg: "#00afe3",
+              bookBg: "#0d3e80",
+              paymentSectionBg: "#f5f7fa",
+              lighterBlue: "#f0fbff",
+              featureBg: "#66d6ff",
+            },
+            fontFamily: {
+              roboto: ["Roboto", "sans-serif"],
+            },
+            boxShadow: {
+              navShadow: "0px 25px 8px 8px rgba(0, 0, 0, 0.08)",
+            },
+            screens: {
+              laptop: "1024px",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- NAVBAR SECTION -->
+    <div
+      class="flex justify-between items-center mx-[5%] mt-[4%] laptop:mt-[2%]"
+    >
+      <img
+        class="h-[35px] laptop:h-[50px]"
+        src="/assets/paytm_logo.png"
+        alt=""
+      />
+
+      <div
+        class="hidden laptop:flex laptop:gap-x-[20px] font-roboto font-medium"
+      >
+        <a class="text-[20px]" href="">Paytm for Consumer</a>
+        <a class="text-[20px]" href="">Paytm for Business</a>
+        <a class="text-[20px]" href="">Company</a>
+        <a class="text-[20px]" href="">Investor Relation</a>
+        <a class="text-[20px]" href="">Career</a>
+      </div>
+      <div
+        class="flex justify-between items-center rounded-3xl bg-lightBlue py-0.5"
+      >
+        <p
+          class="font-roboto font-medium ml-4 mr-3 text-white laptop:text-[23px]"
+        >
+          Sign In
+        </p>
+        <img
+          class="mr-0.5 h-[25px] laptop:h-[35px]"
+          src="/assets/user.svg"
+          alt="userIcon"
+        />
+      </div>
+    </div>
+    <div class="bg-navBarGray mt-[5px]">
+      <h2 class="text-[15px] mx-[5%] text-center py-2 font-roboto font-normal">
+        No Wallet KYC Required 😊 to pay using UPI on Paytm. Learn more.
+      </h2>
+    </div>
+
+    <!-- INTRO SECTION -->
+    <div
+      class="flex flex-col mx-[5%] laptop:flex-row laptop:justify-between laptop:m-0 laptop:my-[5%]"
+    >
+      <div
+        class="flex flex-col justify-center items-center laptop:ml-[5%] laptop:items-start laptop:justify-start"
+      >
+        <img
+          class="h-[100px] shadow-xl rounded-3xl laptop:ml-[10%]"
+          src="/assets/IntroLeftSideImage.png"
+          alt=""
+        />
+        <h1
+          class="mt-[20px] text-[30px] font-bold text-center laptop:ml-[10%] laptop:text-left laptop:text-[50px]"
+        >
+          India's Most-loved <br />
+          Payments App
+        </h1>
+        <p
+          class="mt-[20px] text-[16px] font-medium text-center laptop:ml-[10%] laptop:text-left laptop:text-[20px] laptop:w-[45%]"
+        >
+          Recharge & pay bills, book flights & movie tickets, open a savings
+          account, invest in stocks & mutual funds, and do a lot more.
+        </p>
+        <div
+          class="mt-[20px] laptop:ml-[10%] rounded-3xl bg-black text-white border-[2px] border-black w-fit flex justify-between items-center px-6 py-2 cursor-pointer hover:bg-white hover:border-[2px] hover:text-black hover:border-black"
+        >
+          <p class="font-medium">Download Paytm App</p>
+          <i class="fa-brands fa-apple mx-2"></i>
+          <i class="fab fa-google-play"> </i>
+        </div>
+      </div>
+
+      <div class="mt-[20px]">
+        <img class="laptop:h-[500px]" src="/assets/IntroImage.png" alt="" />
+      </div>
+    </div>
+
+    <!-- RECHARGE & PAY BILL SECTION -->
+    <div
+      class="bg-lightBlue font-roboto text-white mt-[25px] mb-[10px] laptop:mb-0 flex flex-col justify-center items-center laptop:items-start"
+    >
+      <h1
+        class="text-[30px] font-bold text-center laptop:text-left laptop:text-[40px] laptop:ml-[10%]"
+      >
+        Recharge & Pay Bills on Paytm.
+      </h1>
+      <div
+        class="grid grid-rows-1 mt-[30px] text-lg font-medium laptop:grid-cols-7 laptop:ml-[10%]"
+      >
+        <div
+          class="w-[170px] pl-[15px] py-[15px] hover:bg-rechargeBg hover:rounded-[20px] flex flex-col items-center laptop:items-start"
+        >
+          <img class="w-[70px]" src="/assets/Recharge1.png" alt="" />
+          <h2 class="mt-[20px]">
+            Recharge <br />
+            Prepaid <br />
+            Mobile <i class="fas fa-angle-right"></i>
+          </h2>
+        </div>
+        <div
+          class="w-[170px] laptop:items-start pl-[15px] py-[15px] hover:bg-rechargeBg hover:rounded-[20px] flex flex-col items-center"
+        >
+          <img class="w-[70px]" src="/assets/Recharge2.png" alt="" />
+          <h2 class="mt-[20px]">
+            Pay <br />
+            Rent <br />
+            Payment <i class="fas fa-angle-right"></i>
+          </h2>
+        </div>
+        <div
+          class="w-[170px] laptop:items-start pl-[15px] py-[15px] hover:bg-rechargeBg hover:rounded-[20px] flex flex-col items-center"
+        >
+          <img class="w-[70px]" src="/assets/Recharge3.png" alt="" />
+          <h2 class="mt-[20px]">
+            Pay <br />
+            Electricity <br />
+            Bill <i class="fas fa-angle-right"></i>
+          </h2>
+        </div>
+        <div
+          class="w-[170px] laptop:items-start pl-[15px] py-[15px] hover:bg-rechargeBg hover:rounded-[20px] flex flex-col items-center"
+        >
+          <img class="w-[70px]" src="/assets/Recharge4.png" alt="" />
+          <h2 class="mt-[20px]">
+            Recharge <br />
+            DTH <br />
+            Connection <i class="fas fa-angle-right"></i>
+          </h2>
+        </div>
+        <div
+          class="w-[170px] laptop:items-start pl-[15px] py-[15px] hover:bg-rechargeBg hover:rounded-[20px] flex flex-col items-center"
+        >
+          <img class="w-[70px]" src="/assets/Recharge5.png" alt="" />
+          <h2 class="mt-[20px]">
+            Book <br />
+            Gas <br />
+            Cylinder <i class="fas fa-angle-right"></i>
+          </h2>
+        </div>
+        <div
+          class="w-[170px] laptop:items-start pl-[15px] py-[15px] hover:bg-rechargeBg hover:rounded-[20px] flex flex-col items-center"
+        >
+          <img class="w-[70px]" src="/assets/Recharge6.png" alt="" />
+          <h2 class="mt-[20px]">
+            Pay <br />
+            Credit <br />
+            Card Bill <i class="fas fa-angle-right"></i>
+          </h2>
+        </div>
+        <div
+          class="w-[170px] laptop:items-start pl-[15px] py-[15px] hover:bg-rechargeBg hover:rounded-[20px] flex flex-col items-center"
+        >
+          <img class="w-[70px]" src="/assets/Recharge7.png" alt="" />
+          <h2 class="mt-[20px]">
+            All <br />
+            Payment <br />
+            Service <i class="fas fa-angle-right"></i>
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOOK & BUY SECTION -->
+    <div
+      class="bg-darkBlue font-roboto text-white flex flex-col items-center laptop:items-start"
+    >
+      <h1
+        class="text-[30px] text-center font-bold laptop:text-left laptop:text-[40px] laptop:ml-[10%]"
+      >
+        Book & Buy on Paytm.
+      </h1>
+      <div
+        class="grid grid-rows-1 items-center mt-[30px] ml-[80px] text-lg font-medium laptop:grid-cols-7 laptop:ml-[10%]"
+      >
+        <div
+          class="w-[170px] pl-[15px] py-[15px] hover:bg-bookBg hover:rounded-[20px]"
+        >
+          <img class="w-[70px]" src="/assets/Book1.png" alt="" />
+          <h2 class="mt-[20px]">
+            Movie <br />
+            Tickets <i class="fas fa-angle-right"></i>
+          </h2>
+        </div>
+        <div
+          class="w-[170px] pl-[15px] py-[15px] hover:bg-bookBg hover:rounded-[20px]"
+        >
+          <img class="w-[70px]" src="/assets/Book2.png" alt="" />
+          <h2 class="mt-[20px]">
+            Flight <br />
+            Tickets <i class="fas fa-angle-right"></i>
+          </h2>
+        </div>
+        <div
+          class="w-[170px] pl-[15px] py-[15px] hover:bg-bookBg hover:rounded-[20px]"
+        >
+          <img class="w-[70px]" src="/assets/Book3.png" alt="" />
+          <h2 class="mt-[20px]">
+            Bus <br />
+            Tickets <i class="fas fa-angle-right"></i>
+          </h2>
+        </div>
+        <div
+          class="w-[170px] pl-[15px] py-[15px] hover:bg-bookBg hover:rounded-[20px]"
+        >
+          <img class="w-[70px]" src="/assets/Book4.png" alt="" />
+          <h2 class="mt-[20px]">
+            Train <br />
+            Tickets <i class="fas fa-angle-right"></i>
+          </h2>
+        </div>
+        <div
+          class="w-[170px] pl-[15px] py-[15px] hover:bg-bookBg hover:rounded-[20px]"
+        >
+          <img class="w-[70px]" src="/assets/Book5.png" alt="" />
+          <h2 class="mt-[20px]">
+            Car & <br />
+            Bikes <i class="fas fa-angle-right"></i>
+          </h2>
+        </div>
+        <div
+          class="w-[170px] pl-[15px] py-[15px] hover:bg-bookBg hover:rounded-[20px]"
+        >
+          <img class="w-[70px]" src="/assets/Book6.png" alt="" />
+          <h2 class="mt-[20px]">
+            International <br />
+            Flights <i class="fas fa-angle-right"></i>
+          </h2>
+        </div>
+        <div
+          class="w-[170px] pl-[15px] py-[15px] hover:bg-bookBg hover:rounded-[20px]"
+        >
+          <img class="w-[70px]" src="/assets/Book7.png" alt="" />
+          <h2 class="mt-[20px]">
+            Invest <br />
+            In Stocks <i class="fas fa-angle-right"></i>
+          </h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAYMENT INSTRUCTION SECTION -->
+    <div class="flex flex-col bg-paymentSectionBg">
+      <h1
+        class="mt-[20px] text-center text-[30px] font-bold laptop:text-left laptop:ml-[13%] laptop:text-[40px] laptop:mt-[40px]"
+      >
+        Paytm Payment Instruments
+      </h1>
+
+      <!-- PAYTM WALLET SECTION -->
+      <div
+        class="mx-[5%] laptop:mx-[13%] my-[25px] flex flex-col bg-white rounded-[10px] laptop:flex-row laptop:py-[5%]"
+      >
+        <div
+          class="flex flex-col items-center mt-[10px] laptop:items-start laptop:ml-[7%] laptop:w-1/2"
+        >
+          <div class="flex items-center laptop:mt-[20px]">
+            <img
+              class="w-[80px] mr-[20px]"
+              src="/assets/walletIcon.png"
+              alt=""
+            />
+            <h2 class="text-[18px] font-roboto font-bold">
+              Paytm <br />
+              Wallet
+            </h2>
+          </div>
+          <h1
+            class="text-center font-bold text-[25px] laptop:text-[40px] laptop:text-left laptop:w-[90%] laptop:my-[25px]"
+          >
+            The Fastest Way to Pay In-store & Online.
+          </h1>
+          <p
+            class="text-center text-[17px] font-medium laptop:text-[20px] laptop:text-left"
+          >
+            Load up your Paytm Wallet for free and make payments in a jiffy at
+            over 21 million stores, websites and apps.
+          </p>
+          <div
+            class="mt-[20px] laptop:mt-[30px] rounded-3xl bg-black text-white border-[2px] border-black w-fit flex justify-between items-center px-6 py-2 cursor-pointer hover:bg-white hover:border-[2px] hover:text-black hover:border-black"
+          >
+            <p class="font-medium">Download Paytm App</p>
+            <i class="fa-brands fa-apple mx-2"></i>
+            <i class="fab fa-google-play"> </i>
+          </div>
+        </div>
+
+        <div class="flex justify-center laptop:w-1/2">
+          <img
+            class="mt-[25px] mb-[10px] laptop:h-[500px]"
+            src="/assets/walletSection.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- UPI MONEY TRANSFER SECTION -->
+      <div
+        class="mx-[5%] laptop:mx-[13%] my-[25px] flex flex-col bg-white rounded-[10px] laptop:flex-row laptop:py-[5%] laptop:justify-between"
+      >
+        <div
+          class="flex flex-col items-center mt-[10px] laptop:items-start laptop:w-1/2 laptop:ml-[7%]"
+        >
+          <div class="flex items-center">
+            <img class="w-[80px] mr-[20px]" src="/assets/upiIcon.png" alt="" />
+            <h2 class="text-[18px] font-roboto font-bold">
+              UPI Money <br />
+              Transfer
+            </h2>
+          </div>
+          <h1
+            class="text-center font-bold text-[25px] laptop:text-[40px] laptop:text-left laptop:w-[90%] laptop:my-[25px]"
+          >
+            Pay anyone directly from your bank account.
+          </h1>
+          <p
+            class="text-center text-[17px] font-medium laptop:text-[20px] laptop:text-left"
+          >
+            Pay anyone, everywhere. Make contactless & secure payments in-stores
+            or online using Paytm Wallet or Directly from your Bank Account.
+            Plus, send & receive money from anyone.
+          </p>
+          <div
+            class="mt-[20px] laptop:mt-[30px] rounded-3xl bg-black text-white border-[2px] border-black w-fit flex justify-between items-center px-6 py-2 cursor-pointer hover:bg-white hover:border-[2px] hover:text-black hover:border-black"
+          >
+            <p class="font-medium">Download Paytm App</p>
+            <i class="fa-brands fa-apple mx-2"></i>
+            <i class="fab fa-google-play"> </i>
+          </div>
+        </div>
+
+        <div class="flex justify-center laptop:w-1/2 laptop:mr-[3%]">
+          <img
+            class="mt-[25px] mb-[10px]"
+            src="/assets/upiSection.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- PAYTM POSTPAID SECTION -->
+      <div
+        class="mx-[5%] laptop:mx-[13%] laptop:flex-row my-[25px] flex flex-col bg-white rounded-[10px] laptop:py-[5%]"
+      >
+        <div
+          class="flex flex-col items-center mt-[10px] laptop:items-start laptop:w-1/2 laptop:ml-[7%]"
+        >
+          <img class="h-[80px]" src="/assets/postpaidIcon.png" alt="" />
+          <h1
+            class="text-center font-bold text-[25px] laptop:text-[40px] laptop:text-left laptop:w-[90%] laptop:my-[25px]"
+          >
+            Want it? No more waiting for it.
+          </h1>
+          <p
+            class="text-center text-[17px] font-medium laptop:text-[20px] laptop:text-left"
+          >
+            With Paytm Postpaid, your wishlist doesn't have to be on the
+            waitlist. Shop for the things you want today and pay for them next
+            month.
+          </p>
+          <div
+            class="mt-[20px] laptop:mt-[30px] rounded-3xl bg-darkBlue text-white w-fit flex justify-between items-center px-6 py-2 cursor-pointer gap-x-[10px] hover:bg-lightBlue hover:ease-in-out hover:gap-x-[17px] hover:duration-300"
+          >
+            <p class="text-[17px] font-medium">Learn More</p>
+            <i class="fa-solid fa-arrow-right text-[17px]"></i>
+          </div>
+        </div>
+
+        <div class="flex justify-center laptop:w-1/2 laptop:mr-[3%]">
+          <img
+            class="mt-[25px] mb-[10px] laptop:h-[500px]"
+            src="/assets/postpaidSection.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- CARD SECTION -->
+      <div
+        class="mx-[5%] laptop:mx-[13%] my-[25px] flex flex-col gap-y-[20px] laptop:flex-row laptop:gap-y-[0px] laptop:gap-x-[20px]"
+      >
+        <div
+          class="flex flex-col items-center bg-white rounded-[10px] laptop:items-start"
+        >
+          <img
+            class="h-[80px] laptop:ml-[7%]"
+            src="/assets/hdfcIcon.png"
+            alt=""
+          />
+          <h1
+            class="text-center font-bold text-[25px] my-[15px] laptop:text-left laptop:ml-[7%] laptop:text-[40px] laptop:w-[80%]"
+          >
+            Unlimited Cashback Every time
+          </h1>
+          <p
+            class="text-center text-[17px] font-medium laptop:text-left laptop:ml-[7%] laptop:text-[20px]"
+          >
+            Paytm HDFC Bank Select Credit Card. A card with assured Cashback and
+            incredible offers.
+          </p>
+          <img class="mt-[25px]" src="/assets/hdfcSection.png" alt="" />
+        </div>
+
+        <div
+          class="flex flex-col items-center bg-white rounded-[10px] laptop:items-start"
+        >
+          <img
+            class="h-[20px] mt-[15px] laptop:ml-[7%] laptop:mt-[10%]"
+            src="/assets/sbiIcon.png"
+            alt=""
+          />
+          <h1
+            class="text-center font-bold text-[25px] my-[15px] laptop:text-left laptop:ml-[7%] laptop:text-[40px] laptop:w-[80%]"
+          >
+            India’s Most Sincere Credit Card
+          </h1>
+          <p
+            class="text-center text-[17px] font-medium laptop:text-left laptop:ml-[7%] laptop:text-[20px]"
+          >
+            Paytm SBI Card SELECT - With Intelligent Features & Great Rewards
+            that Never Expire
+          </p>
+          <img class="mt-[25px]" src="/assets/sbiSection.png" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- FINANCE SERVICE BY PAYTM SECTION -->
+    <div>
+      <h1
+        class="mt-[20px] text-center text-[30px] font-bold laptop:text-[40px] laptop:text-left laptop:mx-[13%]"
+      >
+        Financial Services by Paytm
+      </h1>
+
+      <!-- PAYTM BANK SECTION -->
+      <div
+        class="my-[25px] laptop:mx-[13%] laptop:flex laptop:flex-row laptop:py-[5%]"
+      >
+        <div
+          class="flex flex-col items-center mx-[5%] laptop:mx-0 laptop:w-1/2 laptop:items-start laptop:gap-y-[30px]"
+        >
+          <img class="h-[30px]" src="/assets/paytmBankIcon.png" alt="" />
+          <h1
+            class="text-center font-bold text-[25px] my-[15px] laptop:text-[40px] laptop:text-left laptop:w-[80%]"
+          >
+            India's most sincere bank.
+          </h1>
+          <p
+            class="text-center text-[17px] font-medium laptop:text-[20px] laptop:text-left"
+          >
+            Paytm Payments Bank offers secure, transparent and risk-free banking
+            at your fingertips. With instant account opening, virtual debit card
+            and zero balance requirements, experience the future of banking
+            today.
+          </p>
+          <div
+            class="mt-[20px] rounded-3xl bg-darkBlue text-white w-fit flex justify-between items-center px-6 py-2 cursor-pointer gap-x-[10px] hover:bg-lightBlue hover:ease-in-out hover:gap-x-[17px] hover:duration-300"
+          >
+            <p class="text-[17px] font-medium">Learn More</p>
+            <i class="fa-solid fa-arrow-right text-[17px]"></i>
+          </div>
+        </div>
+
+        <div class="my-[20px] mx-[5%] laptop:w-1/2 laptop:mx-0">
+          <img
+            class="laptop:h-[500px] laptop:float-right"
+            src="/assets/paytmBankSection.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- PAYTM MONEY SECTION -->
+      <div
+        class="flex flex-col my-[25px] bg-paymentSectionBg laptop:flex-row laptop:py-[5%]"
+      >
+        <div class="mt-[20px] mx-[5%] laptop:ml-[13%] laptop:w-1/2">
+          <img src="/assets/paytmMoneySection.png" alt="" />
+        </div>
+
+        <div
+          class="mx-[5%] my-[20px] flex flex-col items-center laptop:mr-[13%] laptop:w-1/2 laptop:items-start laptop:gap-y-[15px]"
+        >
+          <img
+            class="h-[40px] laptop:h-[60px]"
+            src="/assets/paytmMoneyIcon.png"
+            alt=""
+          />
+          <h1
+            class="text-center font-bold text-[25px] my-[15px] laptop:text-left laptop:text-[40px] laptop:w-[70%]"
+          >
+            Build Long-term Wealth & Achieve your Goals.
+          </h1>
+          <p
+            class="text-center text-[17px] font-medium laptop:text-left laptop:text-[20px]"
+          >
+            Investing on Paytm Money is transparent, low-cost and
+            commission-free. Buy stocks & mutual funds that can help you create
+            wealth & realise your dreams.
+          </p>
+          <div
+            class="mt-[20px] rounded-3xl bg-darkBlue text-white w-fit flex justify-between items-center px-6 py-2 cursor-pointer gap-x-[10px] hover:bg-lightBlue hover:ease-in-out hover:gap-x-[17px] hover:duration-300"
+          >
+            <p class="text-[17px] font-medium">Learn More</p>
+            <i class="fa-solid fa-arrow-right text-[17px]"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- INSURANCE SECTION -->
+      <div
+        class="flex flex-col my-[25px] laptop:flex-row laptop:mx-[13%] laptop:py-[5%]"
+      >
+        <div
+          class="mx-[5%] mb-[20px] flex flex-col items-center laptop:gap-y-[30px] laptop:w-1/2 laptop:items-start laptop:mx-0"
+        >
+          <img
+            class="h-[40px] laptop:h-[60px]"
+            src="/assets/insuranceIcon.jpeg"
+            alt=""
+          />
+          <h1
+            class="text-center font-bold text-[25px] my-[15px] laptop:text-left laptop:text-[40px]"
+          >
+            Insurance made easy.
+          </h1>
+          <p
+            class="text-center text-[17px] font-medium laptop:text-left laptop:text-[20px]"
+          >
+            Buying insurance does not have to be tedious, time-consuming &
+            confusing. Paytm Insurance removes the worry of getting insured by
+            making it simple, convenient & easy-to-understand.
+          </p>
+          <div
+            class="mt-[20px] rounded-3xl bg-darkBlue text-white w-fit flex justify-between items-center px-6 py-2 cursor-pointer gap-x-[10px] hover:bg-lightBlue hover:ease-in-out hover:gap-x-[17px] hover:duration-300"
+          >
+            <p class="text-[17px] font-medium">Learn More</p>
+            <i class="fa-solid fa-arrow-right text-[17px]"></i>
+          </div>
+        </div>
+
+        <div class="my-[20px] mx-[5%] laptop:w-1/2 laptop:mx-0">
+          <img
+            class="laptop:h-[400px] laptop:float-right"
+            src="/assets/insuranceSection.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- LOAN SECTION -->
+      <div
+        class="flex flex-col my-[25px] bg-paymentSectionBg laptop:flex-row laptop:py-[5%]"
+      >
+        <div class="my-[20px] mx-[5%] laptop:ml-[13%] laptop:w-1/2 laptop:my-0">
+          <img class="laptop:h-[400px]" src="/assets/loanSection.png" alt="" />
+        </div>
+
+        <div
+          class="mx-[5%] mb-[20px] flex flex-col items-center laptop:mr-[13%] laptop:gap-y-[15px] laptop:w-1/2 laptop:items-start"
+        >
+          <img
+            class="h-[40px] laptop:h-[60px]"
+            src="/assets/loanIcon.png"
+            alt=""
+          />
+          <h1
+            class="text-center font-bold text-[25px] my-[15px] laptop:text-left laptop:text-[40px]"
+          >
+            Get a Personal Loan in 2 Minutes.
+          </h1>
+          <p
+            class="text-center text-[17px] font-medium laptop:text-left laptop:text-[20px]"
+          >
+            Paytm offers India's quickest multi-purpose, hassle-free loan. It is
+            100% digital, transparent and paperless.
+          </p>
+          <div
+            class="mt-[20px] rounded-3xl bg-darkBlue text-white w-fit flex justify-between items-center px-6 py-2 cursor-pointer gap-x-[10px] hover:bg-lightBlue hover:ease-in-out hover:gap-x-[17px] hover:duration-300"
+          >
+            <p class="text-[17px] font-medium">Learn More</p>
+            <i class="fa-solid fa-arrow-right text-[17px]"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BUSINESS SERVICE SECTION -->
+    <div class="laptop:mx-[13%]">
+      <h1
+        class="my-[20px] text-center text-[30px] font-bold laptop:text-left laptop:text-[40px]"
+      >
+        Business Services by Paytm
+      </h1>
+
+      <!-- ACCEPT PAYMENT SECTION -->
+      <div
+        class="mx-[5%] laptop:w-full laptop:mx-0 bg-paymentSectionBg rounded-[10px] laptop:flex laptop:flex-row laptop:py-[5%]"
+      >
+        <div
+          class="mx-[2%] flex flex-col items-center laptop:w-1/2 laptop:mx-0 laptop:ml-[5%] laptop:mt-[10%] laptop:items-start"
+        >
+          <h1
+            class="text-center font-bold text-[25px] my-[15px] laptop:text-left laptop:text-[40px] laptop:w-[80%]"
+          >
+            Accept payments online with ease
+          </h1>
+          <p
+            class="text-center text-[17px] font-medium laptop:text-left laptop:text-[20px]"
+          >
+            Grow your business with the payment gateway that powers India’s
+            largest brands and even the Paytm App
+          </p>
+          <div
+            class="mt-[20px] rounded-3xl bg-darkBlue text-white w-fit flex justify-between items-center px-6 py-2 cursor-pointer gap-x-[10px] hover:bg-lightBlue hover:ease-in-out hover:gap-x-[17px] hover:duration-300"
+          >
+            <p class="text-[17px] font-medium">Learn More</p>
+            <i class="fa-solid fa-arrow-right text-[17px]"></i>
+          </div>
+        </div>
+
+        <div class="mx-[2%] my-[20px] laptop:w-1/2 laptop:mx-0">
+          <img
+            class="laptop:h-[400px] laptop:float-right"
+            src="/assets/acceptPaymentSection.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- SHOP PAYMENT SECTION -->
+      <div
+        class="mx-[5%] bg-paymentSectionBg w-full laptop:mx-0 laptop:flex laptop:flex-row rounded-[10px] laptop:mt-[5%] laptop:py-[5%]"
+      >
+        <div
+          class="mx-[2%] flex flex-col items-center laptop:w-1/2 laptop:mx-0 laptop:mt-[10%] laptop:items-start laptop:ml-[5%]"
+        >
+          <h1
+            class="text-center font-bold text-[25px] my-[15px] laptop:text-left laptop:text-[40px] laptop:w-[80%]"
+          >
+            In-shop payments powered by Paytm.
+          </h1>
+          <p
+            class="text-center text-[17px] font-medium laptop:text-left laptop:text-[20px]"
+          >
+            Millions of small & big businesses use Paytm to accept payments
+            anywhere any time with a wide range of solutions for all kind of
+            merchants
+          </p>
+
+          <div
+            class="mt-[20px] rounded-3xl bg-darkBlue text-white w-fit flex justify-between items-center px-6 py-2 cursor-pointer gap-x-[10px] hover:bg-lightBlue hover:ease-in-out hover:gap-x-[17px] hover:duration-300"
+          >
+            <p class="text-[17px] font-medium">Learn More</p>
+            <i class="fa-solid fa-arrow-right text-[17px]"></i>
+          </div>
+        </div>
+
+        <div class="mx-[2%] my-[20px] laptop:w-1/2 laptop:mx-0">
+          <img
+            class="laptop:h-[400px] laptop:float-right"
+            src="/assets/shopPaymentSection.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- BUSINESS TOOLS SECTION -->
+    <div class="laptop:mx-[13%]">
+      <h1
+        class="my-[20px] laptop:mt-[5%] text-center text-[30px] laptop:w-[40%] font-bold laptop:text-left laptop:text-[40px]"
+      >
+        Business Tools to help your business grow
+      </h1>
+
+      <div
+        class="mx-[5%] grid grid-rows-1 flex flex-col items-center laptop:items-start laptop:mx-0 laptop:gap-x-[25px] laptop:grid-cols-4"
+      >
+        <div class="">
+          <img class="" src="/assets/bt-1.png" alt="" />
+          <div class="flex flex-col">
+            <h1 class="font-bold text-[30px] mt-[15px] mb-[25px]">
+              POS Billing Software
+            </h1>
+            <p class="text-[20px] font-medium">
+              Say Hello to Smart Retail Business Management
+            </p>
+            <a href="" class="text-[18px] mt-[10px] w-fit">Learn More</a>
+          </div>
+        </div>
+
+        <div class="">
+          <img class="" src="/assets/bt-2.png" alt="" />
+          <div class="flex flex-col">
+            <h1 class="font-bold text-[30px] mt-[15px] mb-[25px]">
+              Paytm for Business App
+            </h1>
+            <p class="text-[20px] font-medium">
+              Everything you need to manage your business on your phone
+            </p>
+            <a href="" class="text-[18px] mt-[10px] w-fit">Learn More</a>
+          </div>
+        </div>
+
+        <div class="">
+          <img class="" src="/assets/bt-3.png" alt="" />
+          <div class="flex flex-col">
+            <h1 class="font-bold text-[30px] mt-[15px] mb-[25px]">
+              Advertise on Paytm
+            </h1>
+            <p class="text-[20px] font-medium">
+              Grow your business by advertising on India’s largest mobile
+              business
+            </p>
+            <a href="" class="text-[18px] mt-[10px] w-fit">Learn More</a>
+          </div>
+        </div>
+
+        <div class="">
+          <img class="" src="/assets/bt-4.png" alt="" />
+          <div class="flex flex-col">
+            <h1 class="font-bold text-[30px] mt-[15px] mb-[25px]">
+              Business Khata
+            </h1>
+            <p class="text-[20px] font-medium">Managing Khata made easy</p>
+            <a href="" class="text-[18px] mt-[10px] w-fit">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FEATURES SECTION -->
+    <div class="bg-lighterBlue flex flex-col items-center">
+      <!-- MONEY RELATED FEATURES SECTION -->
+      <div
+        class="mx-[5%] my-[5%] bg-white rounded-[10px] laptop:flex laptop:flex-row laptop:py-[5%] laptop:mx-[13%]"
+      >
+        <div
+          class="flex flex-col items-center mt-[10px] laptop:w-3/12 laptop:ml-[5%] laptop:items-start"
+        >
+          <img
+            class="h-[40px] laptop:h-[60px]"
+            src="/assets/paytmMoneyIcon.png"
+            alt=""
+          />
+          <p
+            class="text-[20px] font-medium laptop:w-[80%] laptop:text-[15px] laptop:mt-[50px]"
+          >
+            Get started on wealth creation journey with Zero brokerage fee & no
+            hidden charges.
+          </p>
+          <a href="" class="text-[18px] mt-[10px] w-fit text-lightBlue"
+            >Learn More</a
+          >
+        </div>
+
+        <div class="my-[10px] mx-[4%] laptop:w-9/12">
+          <div class="grid grid-cols-2 gap-[20px] laptop:grid-cols-4">
+            <div
+              class="h-[220px] w-[150px] bg-featureBg rounded-[10px] flex flex-col items-center"
+            >
+              <img class="w-[140px] mt-[5px]" src="/assets/mf-1.png" alt="" />
+              <p class="mx-[5px] text-center text-[20px] font-bold text-white">
+                Invets in Stocks
+              </p>
+            </div>
+
+            <div
+              class="h-[220px] w-[150px] bg-featureBg rounded-[10px] flex flex-col items-center"
+            >
+              <img class="w-[140px] mt-[5px]" src="/assets/mf-2.png" alt="" />
+              <p class="mx-[5px] text-center text-[20px] font-bold text-white">
+                Invets in Stocks
+              </p>
+            </div>
+
+            <div
+              class="h-[220px] w-[150px] bg-featureBg rounded-[10px] flex flex-col items-center"
+            >
+              <img class="w-[140px] mt-[5px]" src="/assets/mf-3.png" alt="" />
+              <p class="mx-[5px] text-center text-[20px] font-bold text-white">
+                Invets in Stocks
+              </p>
+            </div>
+
+            <div
+              class="h-[220px] w-[150px] bg-featureBg rounded-[10px] flex flex-col items-center"
+            >
+              <img class="w-[140px] mt-[5px]" src="/assets/mf-4.png" alt="" />
+              <p class="mx-[5px] text-center text-[20px] font-bold text-white">
+                Invets in Stocks
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRAVEL RELATED FEATURES SECTION -->
+      <div
+        class="mx-[5%] my-[5%] bg-white rounded-[10px] laptop:flex laptop:flex-row laptop:mx-[13%] laptop:py-[5%]"
+      >
+        <div
+          class="flex flex-col items-center mt-[10px] laptop:w-3/12 laptop:items-start laptop:ml-[5%]"
+        >
+          <img
+            class="h-[40px] laptop:h-[60px]"
+            src="/assets/paytmTravelIcon.png"
+            alt=""
+          />
+          <p
+            class="text-[20px] font-medium laptop:w-[80%] laptop:text-[15px] laptop:mt-[50px]"
+          >
+            Best travel solutions with quick ticket bookings, great offers and
+            easy refunds
+          </p>
+          <a href="" class="text-[18px] mt-[10px] w-fit text-lightBlue"
+            >Learn More</a
+          >
+        </div>
+
+        <div class="my-[10px] mx-[4%] laptop:w-9/12">
+          <div class="grid grid-cols-2 gap-[20px] laptop:grid-cols-4">
+            <div
+              class="h-[220px] w-[150px] bg-featureBg rounded-[10px] flex flex-col items-center"
+            >
+              <img class="h-[100px] mt-[5px]" src="/assets/Book2.png" alt="" />
+              <p class="mt-[25px] text-center text-[20px] font-bold text-white">
+                Flat 14% Cahback
+              </p>
+            </div>
+
+            <div
+              class="h-[220px] w-[150px] bg-featureBg rounded-[10px] flex flex-col items-center"
+            >
+              <img class="h-[100px] mt-[5px]" src="/assets/Book3.png" alt="" />
+              <p class="mt-[25px] text-center text-[20px] font-bold text-white">
+                Flat 10% Cahback
+              </p>
+            </div>
+
+            <div
+              class="h-[220px] w-[150px] bg-featureBg rounded-[10px] flex flex-col items-center"
+            >
+              <img class="h-[100px] mt-[5px]" src="/assets/Book4.png" alt="" />
+              <p class="mt-[25px] text-center text-[20px] font-bold text-white">
+                Train Ticket Booking
+              </p>
+            </div>
+
+            <div
+              class="h-[220px] w-[150px] bg-featureBg rounded-[10px] flex flex-col items-center"
+            >
+              <img class="h-[100px] mt-[5px]" src="/assets/Book4.png" alt="" />
+              <p class="mt-[25px] text-center text-[20px] font-bold text-white">
+                Pnr Status
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <div
+      class="flex flex-col items-center bg-paymentSectionBg laptop:flex-row laptop:justify-between laptop:py-[4%]"
+    >
+      <div
+        class="flex flex-col items-center gap-y-[20px] laptop:ml-[13%] laptop:gap-x-[20px] laptop:flex-row laptop:w-fit"
+      >
+        <h1
+          class="font-medium text-center text-[30px] mx-[20px] laptop:mx-0 laptop:w-[30%] laptop:text-[25px]"
+        >
+          Download Paytm App to Pay from anywhere
+        </h1>
+        <img src="/assets/app-store.svg" alt="" />
+        <img src="/assets/gplay-button.svg" alt="" />
+      </div>
+
+      <div class="flex my-[25px] gap-x-[25px] laptop:mr-[13%]">
+        <img src="/assets/twitter.svg" alt="" />
+        <img src="/assets/instagram.svg" alt="" />
+        <img src="/assets/facebook.svg" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
