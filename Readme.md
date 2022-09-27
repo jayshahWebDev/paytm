@@ -1,6 +1,6 @@
 # Hey, there everyone `Jay Shah` here
 
-## [Live Project Demo](https://paytm-clone-beige.vercel.app/)
+## [Live Project Demo](https://paytmm-tailwind.netlify.app/)
 
 
 https://user-images.githubusercontent.com/110232389/189679997-ad6725f2-e56f-4f8a-814d-eae9cb3a093e.mp4
